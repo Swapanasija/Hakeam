@@ -1,0 +1,15 @@
+* {
+	box-sizing: border-box;
+}
+
+body {
+	background: url("h5.jpg");
+	color : white;
+  font-family: 'Arsenal', sans-serif;
+}
+
+input[type="radio"] {
+    -ms-transform: scale(3); /* IE 9 */
+    -webkit-transform: scale(3); /* Chrome, Safari, Opera */
+    transform: scale(3);
+}

@@ -1,0 +1,24 @@
+{
+   "destination_addresses" : [ "Unnamed Road, Khera Kalan Village, Delhi, 110082, India" ],
+   "origin_addresses" : [
+      "Delhi Technological University, Shahbad Daulatpur Village, Rohini, Delhi, 110042, India"
+   ],
+   "rows" : [
+      {
+         "elements" : [
+            {
+               "distance" : {
+                  "text" : "9.3 km",
+                  "value" : 9325
+               },
+               "duration" : {
+                  "text" : "29 mins",
+                  "value" : 1711
+               },
+               "status" : "OK"
+            }
+         ]
+      }
+   ],
+   "status" : "OK"
+}

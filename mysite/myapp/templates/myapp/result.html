@@ -1,0 +1,9 @@
+{% extends 'base.html' %}
+
+{% block content %}
+
+{% for key,value in engaged.items %}
+<h2>{{key}} is matched with {{ value }}</h2>
+<br>
+{% endfor %}
+{% endblock %}

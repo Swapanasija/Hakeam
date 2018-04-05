@@ -1,0 +1,24 @@
+{
+   "destination_addresses" : [ "A-6/70, Pocket 6, Sector 16A, Rohini, Delhi, 110089, India" ],
+   "origin_addresses" : [
+      "Delhi Technological University, Shahbad Daulatpur Village, Rohini, Delhi, 110042, India"
+   ],
+   "rows" : [
+      {
+         "elements" : [
+            {
+               "distance" : {
+                  "text" : "3.3 km",
+                  "value" : 3337
+               },
+               "duration" : {
+                  "text" : "13 mins",
+                  "value" : 783
+               },
+               "status" : "OK"
+            }
+         ]
+      }
+   ],
+   "status" : "OK"
+}

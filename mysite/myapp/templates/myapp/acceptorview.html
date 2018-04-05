@@ -1,0 +1,18 @@
+{% extends 'base.html' %}
+{% load bootstrap3 %}
+{% block content %}
+
+<h3>Please Fill the details below accurately.</h3>
+<form method="post" class="post-form">
+  {% csrf_token %}
+  {% bootstrap_form form %}
+
+  <input type="submit" name="Submit" value="Submit">
+
+
+
+</form>
+
+
+
+{% endblock %}

@@ -1,0 +1,69 @@
+{% extends 'base.html' %}
+
+{% block content %}
+
+  <nav class="navbar navbar-expand-lg navbar-light">
+  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+  <span class="navbar-toggler-icon"></span>
+  </button>
+  <ul class="nav navbar-nav navbar-right">
+
+  {% if user.is_authenticated %}
+        <li><a class="nav-link" href="{% url 'accounts:logout' %}" style="color:white; font-size: 50px;">Log out</a></li>
+  {% else %}
+        <li><a class="nav-link" href="#"></a></li>
+        <li><a class="nav-link" href="#"></a></li>
+        <li><a class="nav-link" href="#"></a></li>
+        <li><a class="nav-link" href="#"></a></li>
+        <li><a class="nav-link" href="#"></a></li>
+        <li><a class="nav-link" href="#"></a></li>
+        <li><a class="nav-link" href="#"></a></li>
+        <li><a class="nav-link" href="#"></a></li>
+        <li><a class="nav-link" href="#"></a></li>
+        <li><a class="nav-link" href="#"></a></li>
+        <li><a class="nav-link" href="#"></a></li>
+        <li><a class="nav-link" href="#"></a></li>
+        <li><a class="nav-link" href="#"></a></li>
+        <li><a class="nav-link" href="#"></a></li>
+        <li><a class="nav-link" href="#"></a></li>
+        <li><a class="nav-link" href="#"></a></li>
+        <li><a class="nav-link" href="#"></a></li>
+        <li><a class="nav-link" href="#"></a></li>
+        <li><a class="nav-link" href="#"></a></li>
+        <li><a class="nav-link" href="#"></a></li>
+        <li><a class="nav-link" href="#"></a></li>
+        <li><a class="nav-link" href="#"></a></li>
+        <li><a class="nav-link" href="#"></a></li>
+        <li><a class="nav-link" href="#"></a></li>
+        <li><a class="nav-link" href="#"></a></li>
+        <li><a class="nav-link" href="#"></a></li>
+        <li><a class="nav-link" href="{% url 'accounts:login' %}" style="color:white; font-size: 50px;">Log in</a></li>
+        <li><a class="nav-link" href="#"></a></li>
+        <li><a class="nav-link" href="#"></a></li>
+        <li><a class="nav-link" href="#"></a></li>
+        <li><a class="nav-link" href="#"></a></li>
+        <li><a class="nav-link" href="{% url 'accounts:signup' %}" style="color:white; font-size: 50px;">Sign up</a></li>
+  {% endif %}
+  </ul>
+  </nav>
+
+<form action="{% url 'myapp:radarview' %}" method="post" class="help">
+  {% csrf_token %}
+   <p style="font-size:50px">
+   <input type="radio" name="x" value="Major">
+   Call an ambulance</p>
+
+  <p style="font-size:50px"> <input type="radio" name="x" value="Minor">
+   Call a nurse
+   </p>
+  <input type="Submit" value="Find" style="font-size:40px; height:70px; width:150px; border-radius:50px;">
+
+  </form>
+
+
+
+
+
+
+
+{% endblock %}

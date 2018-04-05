@@ -1,0 +1,48 @@
+{% extends 'base.html' %}
+
+{% block content %}
+
+<style>
+  p{font-size:40px;}
+</style>
+<!-- {%for x in y%}
+{{x.address}}
+{%endfor%} -->
+{% if length == 5 %}
+<table border="5px black solid" style="font-size:20px;">
+  <thead>
+    <th>Name</th>
+    <th>Address</th>
+    <th>Phone No</th>
+    <th>Rating</th>
+    <th>Time Duration</th>
+  </thead>
+{%for a,b,c,d,e in loaded_data%}
+<tr><td>{{b}}</td>
+<td>{{a}}</td>
+<td>{{c}}</td>
+<td>{{d}}</td>
+<td>{{e}}</td>
+</tr>
+{%endfor%}
+</table>
+{% endif %}
+{% if length == 3 %}
+<table border="5px black solid" style="font-size:20px;">
+  <thead>
+    <th>Name</th>
+    <th>Phone No</th>
+    <th>Time duration</th>
+  </thead>
+{%for a,b,c in loaded_data%}
+<tr><td>{{a}}</td>
+<td>{{b}}</td>
+<td>{{c}}</td>
+</tr>
+{%endfor%}
+</table>
+{% endif %}
+<!-- <p>
+{{loaded_data|safe}}</p> -->
+
+{% endblock %}

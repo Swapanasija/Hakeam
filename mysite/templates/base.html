@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+{% load staticfiles %}
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>Hakeam</title>
+    <script
+  src="https://code.jquery.com/jquery-3.1.1.min.js"
+  integrity="sha256-hVVnYaiADRTO2PzUGmuLJr8BLUSjGIZsDYGmIJLv2b8="
+  crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+    <link rel="stylesheet" href="{% static "css/mystyle.css" %}"/>
+    <link href="https://fonts.googleapis.com/css?family=Arsenal" rel="stylesheet">
+  </head>
+  <body>
+    <nav class="navbar navbar-expand-lg navbar-light bg-light" style="font-size:30px;">
+  <a class="navbar-brand" href="{% url 'index' %}" style="font-size:40px;">Hakeam</a>
+  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+    <span class="navbar-toggler-icon"></span>
+  </button>
+
+  <div class="collapse navbar-collapse" id="navbarSupportedContent">
+    <ul class="navbar-nav mr-auto">
+      <li class="nav-item">
+      <a class="nav-link" href="{% url 'myapp:doctorview' %}">Doctor</a>
+      </li>
+      <li class="nav-item">
+      <a class="nav-link" href="{% url 'myapp:acceptorview' %}">Acceptor</a>
+      </li>
+      <li class="nav-item">
+      <a class="nav-link" href="{% url 'myapp:donorview' %}">Donor</a>
+    </li>
+    </ul>
+
+  </div>
+  <ul class="nav navbar-nav navbar-right">
+      <a class="nav-link" href="{% url 'myapp:helpview' %}">Help</a>
+    </ul>
+</nav>
+
+<div class="container">
+<br><br><br>
+    {% block content %}
+    {% endblock %}
+  </div>
+  </body>
+</html>
